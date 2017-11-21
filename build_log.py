@@ -37,7 +37,8 @@ def log(params):
             response['text'] = 'ERROR Request Jenkins'
 
     else:
-        response['text'] = "/build_log <JOB> <JOB BUILD NUMBER>"
+        response['text'] = "/build_log <JOB>"
+        response['text'] = "/build_log <JOB>"
 
     return response
 

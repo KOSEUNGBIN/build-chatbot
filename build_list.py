@@ -28,12 +28,12 @@ def list(params):
     jenkins_response = requests.get(url, headers=headers, params=param)
 
     if jenkins_response.status_code == 200:
-        response['text'] = '--- \n'
+        response['text'] = '--- \n '
 
         for job in jenkins_response.json()['jobs']:
             for build in job['builds']:
                 response['text'] += build['url']
-                response['text'] += ' \n'
+                response['text'] += ' \n '
 
         response['text'] += '---'
 
